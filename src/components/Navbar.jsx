@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <nav className={`relative border-b-1 px-2 py-4`}>
+    <nav className={`sticky top-0 border-b-1 bg-white px-2 py-4`}>
       <div className="absolute">Nav Title</div>
       <div
         className={`
@@ -8,9 +8,9 @@ const Navbar = () => {
           *:cursor-pointer
         `}
       >
-        <p>About</p>
-        <p>Projects</p>
-        <p>Contact</p>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </div>
     </nav>
   );

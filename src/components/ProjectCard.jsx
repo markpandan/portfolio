@@ -1,6 +1,7 @@
 import ProjectTag from "./ProjectTag";
+import { Globe, Github } from "react-bootstrap-icons";
 
-const ProjectCard = () => {
+const ProjectCard = ({ title, tags = [], children }) => {
   return (
     <div
       className={`
@@ -9,12 +10,11 @@ const ProjectCard = () => {
     >
       <div className="h-3/5 border-b-1"></div>
       <div className="flex h-2/5 flex-col gap-2 p-2">
-        <h2 className="text-lg">Project Title</h2>
+        <h2 className="text-lg font-bold">{title}</h2>
         <div className="flex flex-wrap gap-2">
-          <ProjectTag>React</ProjectTag>
-          <ProjectTag>Javascript</ProjectTag>
-          <ProjectTag>Express</ProjectTag>
-          <ProjectTag>Tailwind Css</ProjectTag>
+          {tags.map((value, index) => (
+            <ProjectTag key={index}>{value}</ProjectTag>
+          ))}
         </div>
       </div>
       <div
@@ -23,13 +23,17 @@ const ProjectCard = () => {
           group-hover:flex group-hover:flex-col
         `}
       >
-        <p className="text-sm">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde natus
-          iste autem commodi saepe maiores, mollitia ipsam deserunt ducimus
-          temporibus fuga dolor aut, aperiam quis cumque excepturi consequuntur
-          odio accusantium?
-        </p>
-        <button className="cursor-pointer border-1 px-2">Visit Website</button>
+        <h2 className="text-lg font-bold">{title}</h2>
+        <p className="text-sm">{children}</p>
+        <div
+          className={`
+            flex gap-4
+            *:cursor-pointer
+          `}
+        >
+          <Globe className="size-6" />
+          <Github className="size-6" />
+        </div>
       </div>
     </div>
   );
