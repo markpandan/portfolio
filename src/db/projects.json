@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "name": "BuzzChat",
+    "tags": [0, 1, 2, 3, 4],
+    "description": "A messaging web app that allows you to send messages, and images to other users. The account, and messages were securely managed via REST API."
+  },
+  {
+    "id": 1,
+    "name": "EchoBoard",
+    "tags": [0, 2, 3],
+    "description": "A web app that allows you to post secretly among the permitted members. Uses a login authentication, and specific permission structures to handle privacy of posting, and moderate contents submitted."
+  },
+  {
+    "id": 2,
+    "name": "PixelHunt",
+    "tags": [0, 1, 2, 3, 4],
+    "description": "A web app game version of \"Where's Waldo\" which you need to find certain characters in the picture, and post your highscore anonymously. Implements a REST API to send, receive data, and secure the score points to avoid tampering."
+  }
+]

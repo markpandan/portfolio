@@ -1,7 +1,7 @@
 const Navbar = () => {
   return (
     <nav className={`sticky top-0 border-b-1 bg-white px-2 py-4`}>
-      <div className="absolute">Nav Title</div>
+      <div className="absolute">markpandan</div>
       <div
         className={`
           flex grow justify-center gap-8 text-center

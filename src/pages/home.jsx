@@ -1,4 +1,6 @@
 import ProjectCard from "../components/ProjectCard";
+import projects from "../db/projects.json";
+import tags from "../db/tags.json";
 
 const Home = () => {
   return (
@@ -7,8 +9,9 @@ const Home = () => {
         <div className="w-2/3 text-end">
           <h1 className="text-4xl font-bold">Hi, everyone!</h1>
           <p>
-            My name is Mark Anthony Pandan. An aspiring, and enthusiastic
-            developer!
+            My name is <strong>Mark Anthony Pandan</strong>. An aspiring, and
+            enthusiastic developer! Preparing to start my journey in this
+            career.
           </p>
         </div>
         <div className="flex h-full w-1/3 items-center justify-center border-1 italic">
@@ -37,53 +40,19 @@ const Home = () => {
       <div id="projects" className="py-18">
         <h2 className="mb-4 text-2xl">My Projects</h2>
         <div className="grid grid-cols-4 gap-4">
-          <ProjectCard
-            title={"BuzzChat"}
-            tags={[
-              "React",
-              "Javascript",
-              "Express JS",
-              "Tailwind CSS",
-              "PostgreSQL",
-            ]}
-          >
-            A messaging web app that allows you to send messages, and images to
-            other users. The account, and messages were securely managed via
-            REST API.
-          </ProjectCard>
-          <ProjectCard
-            title={"SkyShare"}
-            tags={["Javascript", "Express JS", "PostgreSQL"]}
-          >
-            A cloud storage platform that utilizes a virtual storage to create
-            folders, upload files, and share them publicly. The application also
-            allows to create an account that uses JWT (JSON Web Token) as a
-            login authentication
-          </ProjectCard>
-          <ProjectCard
-            title={"PixelHunt"}
-            tags={[
-              "React",
-              "Javascript",
-              "Express JS",
-              "Tailwind CSS",
-              "PostgreSQL",
-            ]}
-          >
-            A web app game version of "Where's Waldo" which you need to find
-            certain characters in the picture, and post your highscore
-            anonymously. Implements a REST API to send, receive data, and secure
-            the score points to avoid tampering.
-          </ProjectCard>
-          <ProjectCard
-            title={"EchoBoard"}
-            tags={["Javascript", "Express JS", "PostgreSQL"]}
-          >
-            A web app that allows you to post secretly among the permitted
-            members. Uses a login authentication, and specific permission
-            structures to handle privacy of posting, and moderate contents
-            submitted.
-          </ProjectCard>
+          {projects.map((project) => {
+            const stringTags = project.tags.map((value) => tags[value].name);
+
+            return (
+              <ProjectCard
+                key={project.id}
+                title={project.name}
+                tags={stringTags}
+              >
+                {project.description}
+              </ProjectCard>
+            );
+          })}
         </div>
       </div>
     </>
