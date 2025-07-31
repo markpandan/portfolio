@@ -1,4 +1,4 @@
-const Container = ({ children }) => {
+const ResponsiveContainer = ({ children }) => {
   return (
     <div
       className={`
@@ -11,4 +11,4 @@ const Container = ({ children }) => {
   );
 };
 
-export default Container;
+export default ResponsiveContainer;

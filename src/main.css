@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+:root {
+  --primary-color: var(--color-slate-950);
+  --secondary-color: var(--color-blue-900);
+  --tertiary-color: var(--color-blue-300);
+}
+
 body {
   height: max-content;
 }

@@ -1,5 +1,8 @@
 const ProjectTag = ({ children }) => {
-  return <p className="rounded-xl border-1 px-2 text-sm">{children}</p>;
+  const newLocal = `
+        rounded-xl bg-[var(--tertiary-color)] px-2 py-1 text-sm text-[var(--primary-color)]  
+      `;
+  return <p className={newLocal}>{children}</p>;
 };
 
 export default ProjectTag;

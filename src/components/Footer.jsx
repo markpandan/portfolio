@@ -1,10 +1,14 @@
-import Container from "./Container";
-import { Linkedin, Github } from "react-bootstrap-icons";
+import { Github, Linkedin } from "react-bootstrap-icons";
+import ResponsiveContainer from "./ResponsiveContainer";
 
 const Footer = () => {
   return (
-    <div className="border-t-1 py-16">
-      <Container>
+    <div
+      className={`
+        border-t-1 border-[var(--tertiary-color)] bg-[var(--secondary-color)] py-16 text-white
+      `}
+    >
+      <ResponsiveContainer>
         <div className="flex items-center justify-between">
           <ul
             className={`
@@ -21,7 +25,7 @@ const Footer = () => {
           </ul>
           <p>2025 | All Rights Reserved</p>
         </div>
-      </Container>
+      </ResponsiveContainer>
     </div>
   );
 };
