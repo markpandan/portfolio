@@ -9,7 +9,7 @@ const Jumbotron = () => {
   useNavbarBreakpoint(
     "jumbotron",
     jumbotronRef,
-    ctl(`sticky top-4 px-2 py-4 text-white`)
+    ctl(`sticky top-0 px-2 py-4 text-white transition-all duration-800`)
   );
 
   return (

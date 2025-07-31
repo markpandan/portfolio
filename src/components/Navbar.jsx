@@ -6,7 +6,7 @@ import ResponsiveContainer from "./ResponsiveContainer";
 const Navbar = () => {
   const { breakpoints } = useNavbarDesign();
   const [design, setDesign] = useState(
-    ctl(`sticky top-0 px-2 py-4 text-white`)
+    ctl(`sticky top-0 px-2 py-4 text-white transition-all duration-800`)
   );
 
   const scrollInto = (id) => {
@@ -15,6 +15,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    console.log(breakpoints);
     const onScroll = () => {
       const scrollY = window.scrollY;
       for (const breakpoint of breakpoints) {
