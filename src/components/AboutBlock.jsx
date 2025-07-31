@@ -1,7 +1,8 @@
+import ctl from "@netlify/classnames-template-literals";
 import { useRef } from "react";
+import { FileText } from "react-bootstrap-icons";
 import useNavbarBreakpoint from "../hooks/useNavbarBreakpoint";
 import ResponsiveContainer from "./ResponsiveContainer";
-import ctl from "@netlify/classnames-template-literals";
 
 const AboutBlock = () => {
   const aboutRef = useRef(null);
@@ -42,7 +43,24 @@ const AboutBlock = () => {
                 growing, and turning challenges into opportunities.
               </p>
               <div>
-                <button className="border-1 px-4">Resume</button>
+                <button
+                  className={`
+                    cursor-pointer rounded-lg border-2 border-gray-800 bg-slate-950 px-4 py-2
+                    transition duration-300 ease-out
+                    hover:scale-105 hover:border-[var(--secondary-color)]
+                    hover:bg-[var(--tertiary-color)]
+                  `}
+                  tra
+                  onClick={() =>
+                    window.open(
+                      "https://drive.google.com/file/d/1rrHHE0-k_E73su-44bfAtZIRFcDoY5C_/view?usp=sharing",
+                      "_blank"
+                    )
+                  }
+                >
+                  <FileText className="mr-4 inline size-8" />
+                  Resume
+                </button>
               </div>
             </div>
           </div>

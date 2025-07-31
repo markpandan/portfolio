@@ -9,13 +9,14 @@ const Navbar = () => {
     ctl(`sticky top-0 z-10 px-2 py-4 text-white transition-all duration-800`)
   );
 
-  const scrollInto = (id) => {
-    const element = document.querySelector(id);
-    element.scrollIntoView({ behavior: "smooth" });
-  };
+  // const scrollInto = (id) => {
+  //   const element = document.querySelector(id);
+  //   element.scrollIntoView({ behavior: "smooth" });
+  // };
 
   useEffect(() => {
-    console.log(breakpoints);
+    // console.log(breakpoints);
+
     const onScroll = () => {
       const scrollY = window.scrollY;
       for (const breakpoint of breakpoints) {
@@ -37,34 +38,25 @@ const Navbar = () => {
   return (
     <nav className={design}>
       <ResponsiveContainer>
-        <div className="absolute">markpandan</div>
+        <button
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="absolute cursor-pointer"
+        >
+          markpandan
+        </button>
         <div
           className={ctl(`
             flex grow justify-end gap-8 text-center
             *:cursor-pointer
           `)}
         >
-          <button
-            onClick={() => {
-              scrollInto("#about");
-            }}
-          >
-            About
-          </button>
-          <button
-            onClick={() => {
-              scrollInto("#projects");
-            }}
-          >
+          <button onClick={() => (location.href = "#about")}>About</button>
+          <button onClick={() => (location.href = "#projects")}>
             Projects
           </button>
-          <button
-            onClick={() => {
-              scrollInto("#contact");
-            }}
-          >
-            Contact
-          </button>
+          <button onClick={() => (location.href = "#contact")}>Contact</button>
         </div>
       </ResponsiveContainer>
     </nav>

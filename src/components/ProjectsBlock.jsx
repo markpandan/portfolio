@@ -19,6 +19,7 @@ const ProjectsBlock = () => {
                 title={project.name}
                 tags={stringTags}
                 links={project.links}
+                image={project.thumbnail}
               >
                 {project.description}
               </ProjectCard>

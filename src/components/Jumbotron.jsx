@@ -30,9 +30,11 @@ const Jumbotron = () => {
             my journey in the web development career.
           </p>
           <button
-            className={`
-              w-max rounded-lg border-2 border-gray-500 bg-[var(--primary-color)] px-4 py-2
-            `}
+            className={ctl(`
+              w-max cursor-pointer rounded-lg border-2 border-gray-500 bg-[var(--primary-color)]
+              px-4 py-2
+            `)}
+            onClick={() => (location.href = "#about")}
           >
             See more
           </button>

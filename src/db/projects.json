@@ -7,7 +7,8 @@
     "links": {
       "github": "https://github.com/markpandan/odin-messaging-app",
       "website": "https://odin-messaging-app-three.vercel.app/"
-    }
+    },
+    "thumbnail": "/assets/buzzchat-small.jpeg"
   },
   {
     "id": 1,
@@ -17,7 +18,8 @@
     "links": {
       "github": "https://github.com/markpandan/odin-members-only",
       "website": "https://odin-members-only-udtz.onrender.com/"
-    }
+    },
+    "thumbnail": "/assets/echoboard-small.jpeg"
   },
   {
     "id": 2,
@@ -27,6 +29,7 @@
     "links": {
       "github": "https://github.com/markpandan/odin-wheres-waldo",
       "website": "https://odin-wheres-waldo.vercel.app/"
-    }
+    },
+    "thumbnail": "/assets/pixelhunt-small.jpeg"
   }
 ]

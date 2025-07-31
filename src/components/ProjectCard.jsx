@@ -1,7 +1,7 @@
 import ProjectTag from "./ProjectTag";
 import { Globe, Github } from "react-bootstrap-icons";
 
-const ProjectCard = ({ title, tags = [], links = {}, children }) => {
+const ProjectCard = ({ title, tags = [], links = {}, children, image }) => {
   return (
     <div
       className={`
@@ -10,7 +10,11 @@ const ProjectCard = ({ title, tags = [], links = {}, children }) => {
         hover:scale-105
       `}
     >
-      <div className="h-3/5 border-b-2 border-gray-800"></div>
+      <img
+        src={image}
+        className="h-3/5 border-b-2 border-gray-800 object-cover"
+        alt={title}
+      />
       <div className="flex h-2/5 flex-col gap-4 bg-gray-950 p-4">
         <h2 className="text-2xl font-bold text-[var(--tertiary-color)]">
           {title}
