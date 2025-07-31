@@ -6,7 +6,11 @@ import ctl from "@netlify/classnames-template-literals";
 const Jumbotron = () => {
   const jumbotronRef = useRef(null);
 
-  useNavbarBreakpoint(jumbotronRef, ctl(`sticky top-0 px-2 py-4 text-white`));
+  useNavbarBreakpoint(
+    "jumbotron",
+    jumbotronRef,
+    ctl(`sticky top-4 px-2 py-4 text-white`)
+  );
 
   return (
     <div

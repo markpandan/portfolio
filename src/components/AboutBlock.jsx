@@ -7,8 +7,14 @@ const AboutBlock = () => {
   const aboutRef = useRef(null);
 
   useNavbarBreakpoint(
+    "about",
     aboutRef,
-    ctl(`sticky top-0 bg-[var(--primary-color)] px-2 py-4 text-white`)
+    ctl(
+      `
+        sticky top-4 m-auto box-content max-w-6xl rounded-3xl bg-[var(--primary-color)] px-4 py-4
+        text-white
+      `
+    )
   );
 
   return (

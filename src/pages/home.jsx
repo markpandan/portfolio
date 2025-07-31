@@ -11,8 +11,14 @@ const Home = () => {
   const projectRef = useRef(null);
 
   useNavbarBreakpoint(
+    "projects",
     projectRef,
-    ctl(`sticky top-0 bg-[var(--secondary-color)] px-2 py-4 text-white`)
+    ctl(
+      `
+        sticky top-4 m-auto box-content max-w-6xl rounded-3xl bg-[var(--secondary-color)] px-4 py-4
+        text-white
+      `
+    )
   );
 
   return (
