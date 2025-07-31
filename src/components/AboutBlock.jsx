@@ -12,8 +12,9 @@ const AboutBlock = () => {
     aboutRef,
     ctl(
       `
-        sticky top-4 z-10 m-auto box-content max-w-6xl rounded-3xl bg-[var(--primary-color)] px-4
-        py-4 text-white transition-all
+        sticky top-0 z-10 m-auto w-full bg-[var(--primary-color)] px-2 py-4 text-white
+        transition-all
+        xl:top-4 xl:box-content xl:w-6xl xl:rounded-3xl xl:px-4
       `
     )
   );
@@ -22,12 +23,27 @@ const AboutBlock = () => {
     <div
       ref={aboutRef}
       id="about"
-      className="bg-[var(--secondary-color)] py-50 text-white"
+      className={ctl(`
+        bg-[var(--secondary-color)] py-32 text-white
+        md:py-68
+      `)}
     >
       <ResponsiveContainer>
-        <div className="py-18">
-          <h2 className="mb-4 text-4xl font-semibold">About Me</h2>
-          <div className="flex gap-12">
+        <div>
+          <h2
+            className={ctl(`
+              mb-4 text-center text-4xl font-semibold
+              md:text-start
+            `)}
+          >
+            About Me
+          </h2>
+          <div
+            className={ctl(`
+              flex flex-col items-center gap-12
+              md:flex-row
+            `)}
+          >
             <img
               src="/assets/mark.png"
               alt="Mark cartoon portrait"
@@ -42,15 +58,19 @@ const AboutBlock = () => {
                 innovative software solutions while continually learning,
                 growing, and turning challenges into opportunities.
               </p>
-              <div>
+              <div
+                className={ctl(`
+                  mt-4 text-center
+                  md:text-start
+                `)}
+              >
                 <button
-                  className={`
+                  className={ctl(`
                     cursor-pointer rounded-lg border-2 border-gray-800 bg-slate-950 px-4 py-2
                     transition duration-300 ease-out
                     hover:scale-105 hover:border-[var(--secondary-color)]
                     hover:bg-[var(--tertiary-color)]
-                  `}
-                  tra
+                  `)}
                   onClick={() =>
                     window.open(
                       "https://drive.google.com/file/d/1rrHHE0-k_E73su-44bfAtZIRFcDoY5C_/view?usp=sharing",

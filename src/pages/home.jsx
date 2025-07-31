@@ -15,8 +15,9 @@ const Home = () => {
     projectRef,
     ctl(
       `
-        sticky top-4 z-10 m-auto box-content max-w-6xl rounded-3xl bg-[var(--secondary-color)] px-4
-        py-4 text-white shadow-md transition-all
+        sticky top-0 z-10 m-auto w-full bg-[var(--secondary-color)] px-2 py-4 text-white shadow-md
+        transition-all
+        xl:top-4 xl:box-content xl:w-6xl xl:rounded-3xl xl:px-4
       `
     )
   );
