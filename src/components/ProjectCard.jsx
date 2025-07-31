@@ -6,7 +6,8 @@ const ProjectCard = ({ title, tags = [], links = {}, children }) => {
     <div
       className={`
         group relative flex h-100 flex-col overflow-hidden rounded-xl border-2 border-gray-800
-        select-none
+        transition-all duration-300 select-none
+        hover:scale-105
       `}
     >
       <div className="h-3/5 border-b-2 border-gray-800"></div>

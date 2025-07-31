@@ -11,8 +11,8 @@ const AboutBlock = () => {
     aboutRef,
     ctl(
       `
-        sticky top-4 m-auto box-content max-w-6xl rounded-3xl bg-[var(--primary-color)] px-4 py-4
-        text-white transition-all
+        sticky top-4 z-10 m-auto box-content max-w-6xl rounded-3xl bg-[var(--primary-color)] px-4
+        py-4 text-white transition-all
       `
     )
   );
