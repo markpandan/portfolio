@@ -4,7 +4,7 @@ const particleOptions = {
     color: "#000",
     opacity: "1",
   },
-  fpsLimit: 40,
+  fpsLimit: 60,
   interactivity: {
     events: {
       onClick: { enable: true, mode: "push" },

@@ -1,10 +1,12 @@
+import ctl from "@netlify/classnames-template-literals";
+
 const ResponsiveContainer = ({ children }) => {
   return (
     <div
-      className={`
+      className={ctl(`
         m-auto max-w-6xl px-4
         xl:px-0
-      `}
+      `)}
     >
       {children}
     </div>

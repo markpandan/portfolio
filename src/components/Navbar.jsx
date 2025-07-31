@@ -1,19 +1,69 @@
+import ctl from "@netlify/classnames-template-literals";
+import { useEffect, useState } from "react";
+import useNavbarDesign from "../hooks/useNavbarDesign";
 import ResponsiveContainer from "./ResponsiveContainer";
 
 const Navbar = () => {
+  const { breakpoints } = useNavbarDesign();
+  const [design, setDesign] = useState(
+    ctl(`sticky top-0 px-2 py-4 text-white`)
+  );
+
+  const scrollInto = (id) => {
+    const element = document.querySelector(id);
+    element.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    const onScroll = () => {
+      const scrollY = window.scrollY;
+      for (const breakpoint of breakpoints) {
+        if (
+          scrollY >= breakpoint.scrollTop &&
+          scrollY <= breakpoint.scrollBottom
+        )
+          setDesign(breakpoint.design);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [breakpoints]);
+
   return (
-    <nav className={`sticky top-0 px-2 py-4 text-white`}>
+    <nav className={design}>
       <ResponsiveContainer>
         <div className="absolute">markpandan</div>
         <div
-          className={`
+          className={ctl(`
             flex grow justify-end gap-8 text-center
             *:cursor-pointer
-          `}
+          `)}
         >
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <button
+            onClick={() => {
+              scrollInto("#about");
+            }}
+          >
+            About
+          </button>
+          <button
+            onClick={() => {
+              scrollInto("#projects");
+            }}
+          >
+            Projects
+          </button>
+          <button
+            onClick={() => {
+              scrollInto("#contact");
+            }}
+          >
+            Contact
+          </button>
         </div>
       </ResponsiveContainer>
     </nav>
