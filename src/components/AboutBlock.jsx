@@ -10,8 +10,20 @@ const AboutBlock = () => {
   useNavbarBreakpoint({
     key: "about",
     componentRef: aboutRef,
+<<<<<<< HEAD
     color: "bg-[var(--primary-color)]",
     behaviour: "xl:top-4 xl:box-content xl:w-6xl xl:rounded-3xl xl:px-4",
+=======
+    collapseDesign: ctl(
+      `fixed w-full bg-[var(--primary-color)] px-2 py-4 transition-colors`
+    ),
+    navDesign: ctl(
+      `
+        sticky top-0 z-10 m-auto w-full bg-[var(--primary-color)] text-white transition-all
+        xl:top-4 xl:box-content xl:w-6xl xl:rounded-3xl xl:px-4
+      `
+    ),
+>>>>>>> navbar
   });
 
   return (

@@ -11,8 +11,18 @@ import {
 
 const Navbar = () => {
   const { breakpoints } = useNavbarDesign();
+<<<<<<< HEAD
   const [color, setColor] = useState("");
   const [behaviour, setBehaviour] = useState("");
+=======
+
+  const [design, setDesign] = useState(
+    ctl(`sticky top-0 z-10 text-white transition-all duration-800`)
+  );
+  const [collapseDesign, setCollapseDesign] = useState(
+    ctl(`fixed w-full bg-[var(--primary-color)]/50 px-2 py-4 transition-colors`)
+  );
+>>>>>>> navbar
 
   const navigation = [
     { name: "About", href: "#about" },
@@ -21,8 +31,6 @@ const Navbar = () => {
   ];
 
   useEffect(() => {
-    // console.log(breakpoints);
-
     const onScroll = () => {
       const scrollY = window.scrollY;
       for (const breakpoint of breakpoints) {
@@ -30,8 +38,20 @@ const Navbar = () => {
           scrollY >= breakpoint.scrollTop &&
           scrollY <= breakpoint.scrollBottom
         ) {
+<<<<<<< HEAD
           setColor(breakpoint.color);
           setBehaviour(breakpoint.behaviour);
+=======
+          setCollapseDesign(
+            ctl(`
+              fixed w-full
+              ${breakpoint.color}
+              px-2 py-4 transition-colors
+            `)
+          );
+          setCollapseDesign(breakpoint.collapseDesign);
+          setDesign(breakpoint.navDesign);
+>>>>>>> navbar
         }
       }
     };
@@ -44,6 +64,7 @@ const Navbar = () => {
   }, [breakpoints]);
 
   return (
+<<<<<<< HEAD
     <Disclosure
       as={"nav"}
       className={ctl(
@@ -55,6 +76,9 @@ const Navbar = () => {
         `
       )}
     >
+=======
+    <Disclosure as={"nav"} className={design}>
+>>>>>>> navbar
       <div className={"px-2 py-4"}>
         <ResponsiveContainer>
           <button
@@ -107,7 +131,11 @@ const Navbar = () => {
           </div>
         </ResponsiveContainer>
       </div>
+<<<<<<< HEAD
       <DisclosurePanel className={ctl(`px-2 py-4`)}>
+=======
+      <DisclosurePanel className={collapseDesign}>
+>>>>>>> navbar
         <ResponsiveContainer>
           <div className="flex w-full flex-col gap-4">
             {navigation.map((item) => (
