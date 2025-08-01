@@ -7,17 +7,12 @@ import ResponsiveContainer from "./ResponsiveContainer";
 const AboutBlock = () => {
   const aboutRef = useRef(null);
 
-  useNavbarBreakpoint(
-    "about",
-    aboutRef,
-    ctl(
-      `
-        sticky top-0 z-10 m-auto w-full bg-[var(--primary-color)] px-2 py-4 text-white
-        transition-all
-        xl:top-4 xl:box-content xl:w-6xl xl:rounded-3xl xl:px-4
-      `
-    )
-  );
+  useNavbarBreakpoint({
+    key: "about",
+    componentRef: aboutRef,
+    color: "bg-[var(--primary-color)]",
+    behaviour: "xl:top-4 xl:box-content xl:w-6xl xl:rounded-3xl xl:px-4",
+  });
 
   return (
     <div
