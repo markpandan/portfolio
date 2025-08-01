@@ -13,10 +13,6 @@ const Home = () => {
   useNavbarBreakpoint({
     key: "projects",
     componentRef: projectRef,
-<<<<<<< HEAD
-    color: "bg-[var(--secondary-color)]",
-    behaviour: "xl:top-4 xl:box-content xl:w-6xl xl:rounded-3xl xl:px-4",
-=======
     collapseDesign: ctl(
       `fixed w-full bg-[var(--secondary-color)] px-2 py-4 transition-colors`
     ),
@@ -27,7 +23,6 @@ const Home = () => {
         xl:top-4 xl:box-content xl:w-6xl xl:rounded-3xl xl:px-4
       `
     ),
->>>>>>> navbar
   });
 
   return (

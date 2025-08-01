@@ -9,15 +9,10 @@ const Jumbotron = () => {
   useNavbarBreakpoint({
     key: "jumbotron",
     componentRef: jumbotronRef,
-<<<<<<< HEAD
-    color: "",
-    behaviour: "duration-800",
-=======
     collapseDesign: ctl(
       `fixed w-full bg-[var(--primary-color)]/50 px-2 py-4 transition-colors`
     ),
     navDesign: ctl(`sticky top-0 z-10 text-white transition-all duration-800`),
->>>>>>> navbar
   });
 
   return (
