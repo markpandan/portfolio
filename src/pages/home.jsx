@@ -10,17 +10,20 @@ import ctl from "@netlify/classnames-template-literals";
 const Home = () => {
   const projectRef = useRef(null);
 
-  useNavbarBreakpoint(
-    "projects",
-    projectRef,
-    ctl(
+  useNavbarBreakpoint({
+    key: "projects",
+    componentRef: projectRef,
+    collapseDesign: ctl(
+      `fixed w-full bg-[var(--secondary-color)] px-2 py-4 transition-colors`
+    ),
+    navDesign: ctl(
       `
-        sticky top-0 z-10 m-auto w-full bg-[var(--secondary-color)] px-2 py-4 text-white shadow-md
+        sticky top-0 z-10 m-auto w-full bg-[var(--secondary-color)] text-white shadow-md
         transition-all
         xl:top-4 xl:box-content xl:w-6xl xl:rounded-3xl xl:px-4
       `
-    )
-  );
+    ),
+  });
 
   return (
     <>

@@ -1,7 +1,12 @@
 import { useEffect } from "react";
 import useNavbarDesign from "./useNavbarDesign";
 
-const useNavbarBreakpoint = (key, componentRef, designValue) => {
+const useNavbarBreakpoint = ({
+  key,
+  componentRef,
+  navDesign,
+  collapseDesign,
+}) => {
   const { setBreakpoints } = useNavbarDesign();
 
   useEffect(() => {
@@ -15,7 +20,6 @@ const useNavbarBreakpoint = (key, componentRef, designValue) => {
       Math.round(offset.top) + window.scrollY - offsetBreakpoint;
     const scrollBottom =
       Math.round(offset.bottom) + window.scrollY + offsetBreakpoint;
-    const design = designValue;
 
     setBreakpoints((breakpoints) => {
       const isDuplicate = breakpoints.find((value) => value.key == key);
@@ -23,7 +27,13 @@ const useNavbarBreakpoint = (key, componentRef, designValue) => {
       if (isDuplicate) {
         return breakpoints.map((breakpoint) => {
           if (isDuplicate.key == breakpoint.key) {
-            return { key, scrollTop, scrollBottom, design };
+            return {
+              key,
+              scrollTop,
+              scrollBottom,
+              navDesign,
+              collapseDesign,
+            };
           }
           return breakpoint;
         });
@@ -34,12 +44,13 @@ const useNavbarBreakpoint = (key, componentRef, designValue) => {
             key,
             scrollTop,
             scrollBottom,
-            design,
+            navDesign,
+            collapseDesign,
           },
         ];
       }
     });
-  }, [componentRef, setBreakpoints, designValue, key]);
+  }, [componentRef, setBreakpoints, key, navDesign, collapseDesign]);
 };
 
 export default useNavbarBreakpoint;
