@@ -50,7 +50,13 @@ const AboutBlock = () => {
               className="size-70"
             />
             <div className="flex w-2/3 flex-col gap-4 self-center text-lg">
-              <p>
+              <p
+                className={ctl(`
+                  text-center text-sm
+                  sm:text-lg
+                  md:text-start
+                `)}
+              >
                 Graduated at the Polytechnic University of the Philippines, I
                 have been taught the important values of perseverance, hard
                 work, and determination. Towards my dream as a software

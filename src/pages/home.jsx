@@ -30,7 +30,10 @@ const Home = () => {
       <div
         ref={projectRef}
         id="projects"
-        className="bg-[var(--primary-color)] py-50 text-white"
+        className={ctl(`
+          bg-[var(--primary-color)] py-20 text-white
+          md:py-50
+        `)}
       >
         <ProjectsBlock />
         <ContactBlock />

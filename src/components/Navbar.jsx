@@ -2,6 +2,7 @@ import ctl from "@netlify/classnames-template-literals";
 import { useEffect, useState } from "react";
 import useNavbarDesign from "../hooks/useNavbarDesign";
 import ResponsiveContainer from "./ResponsiveContainer";
+import { List } from "react-bootstrap-icons";
 
 const Navbar = () => {
   const { breakpoints } = useNavbarDesign();
@@ -48,15 +49,32 @@ const Navbar = () => {
         </button>
         <div
           className={ctl(`
-            flex grow justify-end gap-8 text-center
+            flex grow justify-end
             *:cursor-pointer
           `)}
         >
-          <button onClick={() => (location.href = "#about")}>About</button>
-          <button onClick={() => (location.href = "#projects")}>
-            Projects
+          <button
+            className={ctl(`
+              block
+              xs:hidden
+            `)}
+          >
+            <List className="size-6 cursor-pointer" />
           </button>
-          <button onClick={() => (location.href = "#contact")}>Contact</button>
+          <div
+            className={ctl(`
+              hidden gap-8 text-center
+              xs:flex
+            `)}
+          >
+            <button onClick={() => (location.href = "#about")}>About</button>
+            <button onClick={() => (location.href = "#projects")}>
+              Projects
+            </button>
+            <button onClick={() => (location.href = "#contact")}>
+              Contact
+            </button>
+          </div>
         </div>
       </ResponsiveContainer>
     </nav>

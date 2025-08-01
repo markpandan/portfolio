@@ -19,13 +19,23 @@ const Jumbotron = () => {
     >
       <ResponsiveContainer>
         <div className="flex flex-col items-center gap-8 select-none">
-          <h1 className="text-7xl font-semibold">
+          <h1
+            className={ctl(`
+              text-5xl font-semibold
+              xs:text-7xl
+            `)}
+          >
             Hi, I'm{" "}
             <span className="text-[var(--tertiary-color)]">
               Mark Anthony Pandan
             </span>
           </h1>
-          <p className="text-3xl">
+          <p
+            className={ctl(`
+              text-xl
+              xs:text-3xl
+            `)}
+          >
             An aspiring, and enthusiastic developer! <br /> Preparing to start
             my journey in the web development career.
           </p>
