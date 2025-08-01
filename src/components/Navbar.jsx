@@ -21,7 +21,7 @@ const Navbar = () => {
   ];
 
   useEffect(() => {
-    console.log(breakpoints);
+    // console.log(breakpoints);
 
     const onScroll = () => {
       const scrollY = window.scrollY;
@@ -107,12 +107,7 @@ const Navbar = () => {
           </div>
         </ResponsiveContainer>
       </div>
-      <DisclosurePanel
-        className={ctl(`
-          ${color}
-          px-2 py-4 transition-colors
-        `)}
-      >
+      <DisclosurePanel className={ctl(`px-2 py-4`)}>
         <ResponsiveContainer>
           <div className="flex w-full flex-col gap-4">
             {navigation.map((item) => (
