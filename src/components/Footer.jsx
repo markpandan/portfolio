@@ -10,18 +10,30 @@ const Footer = () => {
       `)}
     >
       <ResponsiveContainer>
-        <div className="flex items-center justify-between">
-          <ul
-            className={ctl(`
-              flex gap-4
-              *:flex *:cursor-pointer *:items-center *:gap-2
-            `)}
-          >
+        <div
+          className={ctl(`
+            flex flex-col items-center justify-between gap-4
+            xs:flex-row xs:gap-0
+          `)}
+        >
+          <ul className={ctl(`flex gap-4`)}>
             <li>
-              <Linkedin /> LinkedIn
+              <a
+                href="https://www.linkedin.com/in/mark-anthony-pandan-385939136/"
+                target="_blank"
+                className="flex items-center gap-2"
+              >
+                <Linkedin className="inline" /> LinkedIn
+              </a>
             </li>
             <li>
-              <Github /> Github
+              <a
+                href="https://github.com/markpandan"
+                target="_blank"
+                className="flex items-center gap-2"
+              >
+                <Github className="inline" /> Github
+              </a>
             </li>
           </ul>
           <p>2025 | All Rights Reserved</p>

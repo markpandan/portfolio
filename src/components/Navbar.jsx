@@ -26,8 +26,6 @@ const Navbar = () => {
   ];
 
   useEffect(() => {
-    console.log(breakpoints);
-
     const onScroll = () => {
       const scrollY = window.scrollY;
       for (const breakpoint of breakpoints) {
