@@ -1,0 +1,15 @@
+[
+  { "name": "JavaScript", "img": "/assets/JavaScript.svg" },
+  { "name": "TypeScript", "img": "/assets/TypeScript.svg" },
+  { "name": "Python", "img": "/assets/Python.svg" },
+  { "name": "C#", "img": "/assets/CSharp.svg" },
+  { "name": "C++", "img": "/assets/CPlusPlus.svg" },
+  { "name": "Tailwind CSS", "img": "/assets/Tailwind CSS.svg" },
+  { "name": "Bootstrap", "img": "/assets/Bootstrap.svg" },
+  { "name": "React", "img": "/assets/React.svg" },
+  { "name": "PHP", "img": "/assets/PHP.svg" },
+  { "name": "Express JS", "img": "/assets/Express.svg" },
+  { "name": "PostgresSQL", "img": "/assets/PostgresSQL.svg" },
+  { "name": "MySQL", "img": "/assets/MySQL.svg" },
+  { "name": "Flask", "img": "/assets/Flask.svg" }
+]

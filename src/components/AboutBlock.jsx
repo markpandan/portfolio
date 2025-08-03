@@ -1,6 +1,7 @@
 import ctl from "@netlify/classnames-template-literals";
 import { useRef } from "react";
 import { FileText } from "react-bootstrap-icons";
+import tools from "../db/tools.json";
 import useNavbarBreakpoint from "../hooks/useNavbarBreakpoint";
 import ResponsiveContainer from "./ResponsiveContainer";
 
@@ -31,7 +32,7 @@ const AboutBlock = () => {
       `)}
     >
       <ResponsiveContainer>
-        <div>
+        <div className="mb-24">
           <h2
             className={ctl(`
               mb-4 text-center text-4xl font-semibold
@@ -91,6 +92,29 @@ const AboutBlock = () => {
                 </button>
               </div>
             </div>
+          </div>
+        </div>
+        <div>
+          <h2
+            className={ctl(`
+              mb-4 text-center text-4xl font-semibold
+              md:text-start
+            `)}
+          >
+            My Tech Stacks
+          </h2>
+          <div
+            className={ctl(`
+              flex flex-wrap justify-center gap-4
+              md:justify-start
+              [&_img]:size-12
+            `)}
+          >
+            {tools.map((tool) => (
+              <div data-tooltip- className="rounded-md bg-blue-950 p-2">
+                <img src={tool.img} alt={tool.name} />
+              </div>
+            ))}
           </div>
         </div>
       </ResponsiveContainer>
