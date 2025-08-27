@@ -2,7 +2,7 @@
   {
     "id": 0,
     "name": "Postly",
-    "tags": [0, 1, 2, 3, 4],
+    "tags": [0, 1, 2, 3, 4, 5],
     "description": "A social media web app that lets you create posts, like, comment, follow, and personalize your profile the way you want.",
     "links": {
       "github": "https://github.com/markpandan/odin-book",
@@ -30,7 +30,7 @@
       "github": "https://github.com/markpandan/odin-messaging-app",
       "website": "https://odin-messaging-app-three.vercel.app/"
     },
-    "thumbnail": "/assets/buzzchat-small.jpeg"
+    "thumbnail": "/assets/buzzchat-small.png"
   },
   {
     "id": 3,
