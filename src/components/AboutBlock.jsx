@@ -31,7 +31,6 @@ const AboutBlock = () => {
            md:py-68
          `)}
       >
-         h3
          <ResponsiveContainer>
             <div className="mb-24">
                <h2
